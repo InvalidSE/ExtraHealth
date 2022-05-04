@@ -1,0 +1,6 @@
+name: ExtraHealth
+version: '${project.version}'
+main: me.invalidstateexception.extrahealth.extrahealth.ExtraHealth
+api-version: 1.18
+authors: [ InvalidSE ]
+description: ExtraHealth plugin made for binary_coder or somthn
