@@ -1,7 +1,7 @@
-#ExtraHealth
+# ExtraHealth
 A minecraft with a twist plugin I made by request
 
-###Features
+### Features
 ExtraHealth adds a layer of difficulty to otherwise easy gameplay. When you die, you permanently lose a heart.
 
 The only way to gain health in this plugin so far is to craft them. 
@@ -16,7 +16,7 @@ Feel free to change the crafting recipe if it seems expensive, the server I made
 
 You can have a max of 10 extra hearts if you craft them.
 
-###Admin Commands
+### Admin Commands
 I added admin commands! (incredible)
 
 The commands are below, and are self-explanatory.
