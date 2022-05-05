@@ -3,4 +3,21 @@ version: '${project.version}'
 main: me.invalidstateexception.extrahealth.extrahealth.ExtraHealth
 api-version: 1.18
 authors: [ InvalidSE ]
-description: ExtraHealth plugin made for binary_coder or somthn
+description: ExtraHealth plugin made by InvalidSE#8824
+commands:
+  addhearts:
+    description: Add hearts to a player
+    usage: /addhearts <player> <number>
+    permission: ExtraHealth.setHealth
+  removehearts:
+    description: Remove hearts from a player
+    usage: /removehearts <player> <number>
+    permission: ExtraHeath.setHealth
+  checkhearts:
+    description: Check the amount of hearts a player has
+    usage: /checkhearts <player>
+    permission: ExtraHeath.queryHealth
+  sethearts:
+    description: Set player's health
+    usage: /sethearts <player> <number>
+    permission: ExtraHeath.setHealth

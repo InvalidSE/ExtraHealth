@@ -28,7 +28,7 @@ public class Listeners implements Listener {
 
     @EventHandler
     public void onRightClick(PlayerInteractEvent event){
-        System.out.println("[DEBUG] Triggered Event");
+        // System.out.println("[DEBUG] Triggered Event");
         if(event.getAction().equals(Action.RIGHT_CLICK_AIR) || event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
             Player player = event.getPlayer();
             ItemStack heartItem = CustomItems.getHeartItem();
@@ -36,14 +36,14 @@ public class Listeners implements Listener {
 
             if(!mainHand.getType().equals(Material.BLAZE_POWDER)) return;
             if(!mainHand.getItemMeta().hasLore()) return;
-            System.out.println("[DEBUG] Got to stage 2");
+            // System.out.println("[DEBUG] Got to stage 2");
             if(!mainHand.getItemMeta().getLore().contains(ChatColor.RED + "Extra Heart Container")) return;
-            System.out.println("[DEBUG] Got to stage 3");
+            // System.out.println("[DEBUG] Got to stage 3");
             if(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() >= 40){
                 player.sendMessage(ChatColor.RED + "You cannot have more than 20 hearts!");
                 return;
             }
-            System.out.println("[DEBUG] Got to stage 4");
+            // System.out.println("[DEBUG] Got to stage 4");
 
             double playerHealth = player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue();
             player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(playerHealth + 2);
