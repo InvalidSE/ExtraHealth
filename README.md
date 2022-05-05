@@ -19,7 +19,7 @@ You can have a max of 10 extra hearts if you craft them.
 ### Admin Commands
 I added admin commands! (incredible)
 
-The commands are below, and are self-explanatory.
+The commands are below, and are self-explanatory (All amount values are in HP, not hearts).
 ```
 /addhealth <player> <amount>
 /removehealth <player> <amount>
