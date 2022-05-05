@@ -12,6 +12,7 @@ To craft a heart you will need:
 - 1x Elytra
 
 ![Recipe](https://i.ibb.co/x5MRgps/Screenshot-2022-05-05-215611.png)
+
 Feel free to change the crafting recipe if it seems expensive, the server I made this for had craftable elytras (unfortunately)
 
 You can have a max of 10 extra hearts if you craft them.
