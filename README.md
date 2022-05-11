@@ -1,10 +1,11 @@
 # ExtraHealth
-A minecraft with a twist plugin I made by request
+A LifeSteal plugin I made by request
 
 ### Features
 ExtraHealth adds a layer of difficulty to otherwise easy gameplay. When you die, you permanently lose a heart.
 
-The only way to gain health in this plugin so far is to craft them. 
+Obtain hearts by crafting them, or killing other players. 
+You won't gain a heart if the player you kill is on the minimum health (3 hearts), or you already have the max of 20 hearts.
 
 To craft a heart you will need:
 - 4x Netherite Scrap

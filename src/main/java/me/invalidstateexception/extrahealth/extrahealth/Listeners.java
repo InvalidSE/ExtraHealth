@@ -6,6 +6,7 @@ import org.bukkit.Sound;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -15,10 +16,25 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class Listeners implements Listener {
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.LOWEST)
     public void onDeath(PlayerDeathEvent event){
         Player player = (Player) event.getEntity().getPlayer();
         double playerHealth = player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue();
+
+        if(player.getKiller() != null) {
+            Player killer = (Player) player.getKiller();
+            double killerHealth = killer.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue();
+            if(playerHealth <= 6){
+                killer.sendMessage(ChatColor.RED + "You did not gain another heart as " + player.getDisplayName() + " was already on minimum hearts");
+                return;
+            }
+            if(killerHealth >= 40){
+                killer.sendMessage(ChatColor.RED + "You cannot have more than 20 hearts!");
+                return;
+            }
+            killer.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(killerHealth + 2);
+        }
+
         if(playerHealth <= 6){
             player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(6);
         } else {
