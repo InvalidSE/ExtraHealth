@@ -21,7 +21,8 @@ public class Listeners implements Listener {
         Player player = (Player) event.getEntity().getPlayer();
         double playerHealth = player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue();
 
-        if(player.getKiller() != null) {
+        if(player.getKiller() != null && !player.getKiller().getDisplayName().equals(player.getDisplayName())) {
+
             Player killer = (Player) player.getKiller();
             double killerHealth = killer.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue();
             if(playerHealth <= 6){
